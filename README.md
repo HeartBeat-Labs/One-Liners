@@ -1,2 +1,2 @@
-# smart-notes-letter-generator
-Free, lightweight, privacy-focused educational website to generate exam-ready notes and official letters. Runs fully in the browser with no login, no tracking, and no backend.
+#Learing one liners for exams
+It has 178 days quiz with each containing 35 sets and each set contains 5 questions and answers.
