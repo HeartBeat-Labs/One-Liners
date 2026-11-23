@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Liners — Daily Practice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main Menu View -->
+  <div id="menu-view">
+    <header class="main-header">
+      <h1 class="main-title">One Liners</h1>
+      <p class="subtitle">178 Days • 35 Sets per Day • Active Recall Practice</p>
+      <div class="overall-stats" id="overall-stats">
+        <span id="completed-days-count">0 / 178 Days Completed</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- 178 Day Blocks will be injected here by app.js -->
+      <div id="days-grid" class="days-grid" aria-label="Daily Quizzes"></div>
+    </main>
+  </div>
+
+  <!-- Quiz View -->
+  <div id="quiz-view" class="hidden">
+    <header class="quiz-topbar">
+      <button id="menu-btn" class="btn btn-menu" type="button" aria-label="Return to Main Menu">
+        ☰ Menu
+      </button>
+
+      <div class="quiz-header-info">
+        <h2 id="quiz-day-title">Day 1</h2>
+        <span id="set-counter" class="set-counter">Set 1 of 35</span>
+      </div>
+
+      <button id="reveal-all-btn" class="btn btn-secondary btn-small" type="button">
+        Reveal All
+      </button>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="35" aria-valuenow="1">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+
+    <main class="container quiz-container">
+      <!-- Current Set Card -->
+      <section class="set-card" aria-live="polite">
+        <div class="set-card-header">
+          <span id="question-id-badge" class="qid-badge">ID: Q0000</span>
+          <span id="review-mode-badge" class="review-badge hidden">Review Mode</span>
+        </div>
+
+        <!-- Questions & Individual Reveal Buttons injected here by app.js -->
+        <div id="questions-list" class="questions-list"></div>
+      </section>
+
+      <!-- Bottom Navigation Controls -->
+      <nav class="quiz-nav" aria-label="Set Navigation">
+        <button id="prev-btn" class="btn btn-nav" type="button" disabled>
+          ← Previous
+        </button>
+        <button id="next-btn" class="btn btn-nav btn-primary" type="button">
+          Next →
+        </button>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Dialog Modal for Resume / Review / Restart -->
+  <div id="action-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <h3 id="modal-title" class="modal-title">Day 1</h3>
+      <p id="modal-message" class="modal-message">
+        You have already started this quiz. Would you like to resume or restart?
+      </p>
+      <div class="modal-actions">
+        <button id="modal-primary-btn" class="btn btn-primary" type="button">
+          Resume
+        </button>
+        <button id="modal-restart-btn" class="btn btn-danger" type="button">
+          Restart
+        </button>
+        <button id="modal-cancel-btn" class="btn btn-secondary" type="button">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading / Error Banner -->
+  <div id="status-toast" class="status-toast hidden" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
